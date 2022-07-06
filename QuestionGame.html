@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/Questions.css">
+    <title>QuestionGame</title>
+</head>
+<body>
+    <h1>Answer the question below</h1>
+       <h2>READ THE TUTORIAL</h2>
+        <h3 id="score">Score: 0</h3> 
+    <div id="tutorial">
+        <h4>" In order to answer the following questions, "
+        <br>
+        "Press either t for true or f for false "
+        <br>
+        "A restert button is in progress reload the page to play again"
+        <br>
+        "!Warning! All of the following questions are biased."</h4>
+    </div>
+
+    <h2 id="question">Is SAO a good Anime?</h2>
+
+
+    <script>
+            var count = 0, score = 0; 
+        
+            var array = [
+                { q: "Is SAO a good Anime?", a: "t" },
+                { q: "Bleach does not deserve to be apart of the Big 3", a: "t" },
+                { q: "Roblox is better than minecraft", a: "t" },
+                { q: "Back end development takes less time than front end", a: "f" },
+                { q: "Boruto is not cannon", a: "t" },
+                { q: "This assignment took a long time to complete", a: "t" },
+                { q: "Coding is a great way to relax", a: "f" },
+                { q: "Pc Is better than console", a: "f" },
+                { q: "Dong Is a good teacher", a: "t" },
+                { q: "Disney XD had the best tv shows", a: "t" }
+            ];
+        
+            document.getElementById("question").innerHTML = array[count].q;
+        
+            
+            document.onkeyup   = function (event) {
+                var input = event.key;
+                if(input == "t" || input == "f"){
+                    if (array[count].a == input) {
+                        alert("Nice that was the correct answer");
+                        score++;
+                        document.getElementById("score").innerHTML = "Score: " + score;
+                    }
+                    else{
+                        alert("That is incorect My freind");
+                    }
+                    count++;
+                    if(count < 10){
+                        document.getElementById("question").innerHTML = array[count].q;
+                    }
+                    else{
+                        alert("Thank you for playing Your opinion's thruout this will be  disregarded. Also Bleach > One peice");
+                    }
+                }
+                else{
+                    alert("Please Press either T or F on your keybord");
+                }
+            }
+    </script>
+</body>
+</html>
