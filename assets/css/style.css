@@ -4,7 +4,6 @@ body {
   font-size: 18px;
   line-height: 120%;
   color: #333;
-  background-image: https://images2.alphacoders.com/112/thumbbig-1124353.webp;
 }
 
 header {
@@ -49,7 +48,7 @@ header {
 }
 
 body {
-  background-image: https://images2.alphacoders.com/112/thumbbig-1124353.webp;
+  background: #efeee7;
   padding: 20px;
   font-family: Arial;
 }
@@ -108,3 +107,6 @@ h5{
 }
 
 
+.container{
+  background-image: https://images2.alphacoders.com/112/thumbbig-1124353.webp;
+}
